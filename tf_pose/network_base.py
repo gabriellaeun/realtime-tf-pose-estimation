@@ -13,8 +13,8 @@ from tf_pose import common
 DEFAULT_PADDING = 'SAME'
 
 
-_init_xavier = tf.initializers.GlorotUniform()
-_init_norm = tf.initializers.TruncatedNormal(stddev=0.01)
+_init_xavier = tf.compat.v1.keras.initializers.glorot_uniform()
+_init_norm = tf.compat.v1.keras.initializers.TruncatedNormal(stddev=0.01)
 _init_zero = tf.zeros_initializer()
 _l2_regularizer_00004 = tf.keras.regularizers.l2(l=0.00004)
 _l2_regularizer_convb = tf.keras.regularizers.l2(common.regularizer_conv)
@@ -142,7 +142,7 @@ class BaseNetwork(object):
 
     def make_var(self, name, shape, trainable=True):
         '''Creates a new TensorFlow variable.'''
-        return tf.get_variable(name, shape, trainable=self.trainable & trainable, initializer=tf.contrib.layers.xavier_initializer())
+        return tf.get_variable(name, shape, trainable=self.trainable & trainable, initializer=tf.compat.v1.keras.initializers.TruncatedNormal())
 
     def validate_padding(self, padding):
         '''Verifies that the padding is one of the supported ones.'''
