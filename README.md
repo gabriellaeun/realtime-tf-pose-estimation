@@ -7,7 +7,7 @@ Link to another repo: https://github.com/gsethi2409/tf-pose-estimation
 
 [manual 정리]
 https://prabhjotkaurgosal.com/human-pose-estimation-using-openpose/
-링크 참고
+링크 참고 (띄어쓰기 있는거 없애야 되는 부분 있음 에러 뜨면 띄어쓰기 확인해보자)
 
 https://su0-0su.tistory.com/97
 에러 수정은 이거 참고함
